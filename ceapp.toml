@@ -1,0 +1,22 @@
+[app]
+name = "ce-aggregator"
+version = "0.1.0"
+summary = "Collects building sensor data over the mesh and re-serves it (cap-gated) — same app on any node (Python script ceapp)"
+runtime = "script"
+provides = ["sensor.aggregator"]
+
+[script]
+interpreter = "python3"
+entry = "main.py"
+
+# Runs as a daemon on any node (Mac, relay/server) — nothing hardcoded, no per-host config.
+[daemon]
+enabled = true
+
+[sandbox]
+tier = "none"
+net = "mesh-only"
+
+[deps]
+requires = ["native"]
+capabilities = []
