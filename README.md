@@ -5,9 +5,10 @@ telemetry system. **The same app runs unmodified on any node** (the Mac now, the
 later): it hardcodes no host and no address. It is also the "broadcaster" of the modularity
 vision — deploy a tenth sensor and it collects it with zero edits.
 
-Part of the building-telemetry mesh (`PLAN/ce-building-sensors.md`). Providers:
-[`ce-sensor-climate`](../ce-sensor-climate), [`ce-sensor-camera`](../ce-sensor-camera). Uses
-the shared Python client [`ce-py`](../ce-py) (`ce.py` vendored for the script tier).
+Part of the building-telemetry mesh. Providers: ce-sensor-climate
+(github.com/ce-net/ce-sensor-climate) and ce-sensor-camera
+(github.com/ce-net/ce-sensor-camera). Uses the shared Python client ce-py
+(github.com/ce-net/ce-py; `ce.py` vendored for the script tier).
 
 ## How it works
 

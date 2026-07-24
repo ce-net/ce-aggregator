@@ -9,8 +9,8 @@ clearance can use it" (Leif, 2026-07-05).
 Python has no in-process ``ce-cap`` verifier yet, so :class:`CeIamAuthorizer` shells out to
 the real ``ce-iam verify`` CLI (offline chain check + on-chain revocation, fail-closed).
 This module is vendored alongside ``ce.py`` in each sensor app; the intent is to fold
-``authorize(...)`` into the shared ``ce`` client so every ceapp gets it for free (see the
-note to Cobalt in AGENTS.md). Apps depend on the interface, so that move is transparent.
+``authorize(...)`` into the shared ``ce`` client (the ce-py SDK, github.com/ce-net/ce-py)
+so every ceapp gets it for free. Apps depend on the interface, so that move is transparent.
 
 Test/dev implementations avoid any external process. Everything is fail-closed on error.
 """
